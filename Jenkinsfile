@@ -31,8 +31,8 @@ pipeline{
         }
         stage("Deploy to Tomcat"){
             steps{
-                sh "sudo rm -rf /opt/tomcat/webapps/springboot-0.0.1-SNAPSHOT.war"
-                sh "sudo cp /var/lib/jenkins/workspace/demo/target/springboot-0.0.1-SNAPSHOT.war /opt/tomcat/webapps/"
+                sh "sudo rm -rf /home/ec2-user/apache-tomcat-9.0.31/webapps/springboot-0.0.1-SNAPSHOT.war"
+                sh "sudo cp /var/lib/jenkins/workspace/Demo1/target/springboot-0.0.1-SNAPSHOT.war /home/ec2-user/apache-tomcat-9.0.31/webapps/"
             }
         }
     /*
